@@ -54,7 +54,7 @@ const SignIn = () => {
             // Set cookies after login with expiration of 5 days
             const expiration = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000).toUTCString();
             document.cookie = `authtoken=${"sdssdsd"}; path=/; expires=${expiration};`;
-            router.push('/dashboard');
+            router.push('/');
             successHandler("success", "Login successfully")
         } else {
             setLoading(false);
