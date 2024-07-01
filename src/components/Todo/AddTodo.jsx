@@ -58,11 +58,6 @@ export default function AddTodo({ task, isEdit, open, setOpen, setEdit }) {
         setOpen(false);
         toast({
             title: "Task added successfully",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-                </pre>
-            ),
         });
     };
 
