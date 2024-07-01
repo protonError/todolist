@@ -96,7 +96,7 @@ export default function AddTodo({ task, isEdit, open, setOpen, setEdit }) {
             <DrawerContent className="">
                 <div className="flex flex-col items-center justify-center my-10">
                     <div className="w-full max-w-md p-6 bg-card rounded-lg shadow-lg">
-                        <h1 className="text-2xl font-bold mb-4 text-card-foreground">{isEdit ? "Edit To-Do List" : "To-Do List"}</h1>
+                        <h1 className="text-2xl font-bold mb-4 text-card-foreground">{isEdit ? "Edit Task" : "Add Task"}</h1>
                         <form onSubmit={isEdit ? form.handleSubmit(handleEditTask) : form.handleSubmit(handleAddTask)} className="flex flex-col items-start mb-4 gap-4">
                             <div className="flex flex-col w-full gap-3">
                                 <Label htmlFor="name" className="text-card-foreground">
