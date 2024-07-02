@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
             <body className={`${inter.className} bg-muted`}>
                 <ThemeProviders
                     attribute="class"
-                    defaultTheme="dark"
+                    defaultTheme="light"
                     enableSystem
                     disableTransitionOnChange
                 >
