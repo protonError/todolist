@@ -1,17 +1,17 @@
 "use client"
 import React from 'react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu'
-import { cookies } from 'next/headers'
 import { Button } from '../ui/button'
 import { CircleUser, } from 'lucide-react'
 import ThemeToggler from './ThemeToggler'
+import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 
 const Header = () => {
     const router = useRouter();
 
     const handleLogout = () => {
-        cookies().delete('authtoken')
+        Cookies.remove('authToken');
         router.push('/login');
     };
 

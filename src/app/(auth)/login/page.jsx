@@ -15,6 +15,7 @@ import Head from 'next/head';
 import ThemeToggler from '@src/components/layout/ThemeToggler';
 import { successHandler } from '@src/lib/functions';
 import { toast } from "@src/components/ui/use-toast";
+import Cookies from 'js-cookie';
 const formSchema = z.object({
     email: z
         .string({
@@ -52,8 +53,7 @@ const SignIn = () => {
         if (email === credentials.email && password === credentials.password) {
             setLoading(false);
             // Set cookies after login with expiration of 5 days
-            const expiration = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000).toUTCString();
-            document.cookie = `authtoken=${"sdssdsd"}; path=/; expires=${expiration};`;
+            Cookies.set('authToken', 'loggedIn', { expires: 5 });
             router.push('/');
             successHandler("success", "Login successfully")
         } else {
